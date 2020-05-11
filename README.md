@@ -41,7 +41,7 @@ This should probably be an Ansible script or something but I thought I'd documen
 
 ## Other setup
 
-- kubectx/kubens
+- kubectx/kubens ([snap in progress](https://github.com/cablespaghetti/kubectx-snap))
     ```
     sudo ln -s ~/.kubectx/kubectx /usr/local/bin/
     sudo ln -s ~/.kubectx/kubens /usr/local/bin/
@@ -207,7 +207,7 @@ This should probably be an Ansible script or something but I thought I'd documen
 
 We already install helm via the snap but still need to:
 
-  - Download the latest Helmfile release to /usr/local/bin/helmfile
+  - Download the latest Helmfile release to /usr/local/bin/helmfile ([snap in progress](https://github.com/cablespaghetti/helmfile-snap))
     ```
     sudo wget https://github.com/roboll/helmfile/releases/download/v0.115.0/helmfile_linux_amd64 -O /usr/local/bin/helmfile
     sudo chmod +x /usr/local/bin/helmfile
