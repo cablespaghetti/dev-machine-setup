@@ -33,7 +33,8 @@ This should probably be an Ansible script or something but I thought I'd documen
 - vlc
 - mpv
 - vim
-- openjdk-8-jdk
+- openjdk-8-jdk (to use this use `update-alternatives --config java`)
+- openjdk-11-jdk
 - maven
 - docker.io (and `sudo usermod -aG docker myusername`)
 - tilix (and remap Ctrl-Alt-T to tilix)
@@ -219,8 +220,13 @@ We already install helm via the snap but still need to:
     helm plugin install https://github.com/hypnoglow/helm-s3
     ```
 
-## Thrift 0.9.1 Compilation
+## Vault Setup
 
+Download from https://www.vaultproject.io/downloads and copy the binary to /usr/local/bin/
+
+## Thrift
+
+### Thrift 0.9.1
 I've since found out that it may be possible to download the old .deb package from Ubuntu Xenial and copy the binary file /usr/local/bin/thrift. However this is what I did...
 
 ```
@@ -239,4 +245,11 @@ make
 sudo make install
 sudo ln -s /opt/thrift-0.9.1/bin/thrift /usr/local/bin/
 thrift --version
+```
+
+### Thrift 0.13
+
+```
+sudo apt install thrift-compiler
+sudo ln -s /usr/bin/thrift /usr/local/bin/thrift-0.13
 ```
